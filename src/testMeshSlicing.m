@@ -35,6 +35,9 @@ for i = 2:numel(zs)-1
     VisualizePC = 0;
     for j=1:numel(cycles)
         cycle = cycles{j};
+%         if j==1
+%             VisualizePC=1;
+%         end
         cycleData = markCycles(cycle, U, VisualizePC, 0);
         plot3(cycleData(:,1), cycleData(:,2), cycleData(:,3), 'r-');
     end
